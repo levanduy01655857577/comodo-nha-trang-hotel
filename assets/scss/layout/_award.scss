@@ -1,0 +1,90 @@
+.wrapAward {
+    .wrapSlideItem {
+        margin: 30px -15px 0 -15px;
+    }
+
+    .itemSlide {
+        padding: 0 15px;
+    }
+
+    .wrapImg {
+        @include transition(0.5s);
+    }
+
+    .titleMain {
+        margin-top: 10px;
+    }
+
+    .linkTitle {
+        text-align: center;
+    }
+
+    .btnSeeAll {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .wrapStar {
+        margin-top: 5px;
+
+        .star-rating {
+            font-size: 18px;
+        }
+
+        .fm-rating {
+            display: table;
+            margin: auto;
+        }
+    }
+
+    .contentSlide {
+        &:hover {
+            .wrapImg {
+                @include translate(0, -10px);
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapAward {
+        .wrapSlideItem {
+            margin: 15px -7.5px 0 -7.5px;
+        }
+
+        .itemSlide {
+            padding: 0 7.5px;
+        }
+
+        .borderItem {
+            padding: 10px;
+        }
+
+        .showSlideAward {
+            padding-bottom: 55px;
+        }
+
+        .btnSlide  {    
+            $valPostion: 50%;
+
+            &.right,
+            &.left {
+                top: auto;
+                bottom: 0;
+                @include translate(0, 0);
+            }
+
+            &.left {
+                left: auto;
+                right: $valPostion;
+                margin-right: 7px;
+            }
+        
+            &.right {
+                right: auto;
+                left: $valPostion;
+                margin-left: 7px;
+            }
+        }
+    }
+}

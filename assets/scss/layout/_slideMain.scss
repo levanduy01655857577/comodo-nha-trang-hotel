@@ -1,0 +1,78 @@
+.wrapSlideMain {
+    position: relative;
+    
+    .btnSlide  {    
+        &.right,
+        &.left {
+            top: auto;
+            bottom: 15px;
+            @include translate(0, 0);
+        }
+
+        &.left {
+            left: 15px;
+        }
+    
+        &.right {
+            right: auto;
+            left: 80px
+        }
+    }
+}
+
+.wrapImgSlideMain {
+    @include heightCalc('100vh - 70px');
+}
+
+@media (min-width: 1200px) {
+    .wrapSlideMain {
+        overflow: hidden;
+
+        .btnSlide  {    
+            &.right,
+            &.left {
+                bottom: -100%;
+            }
+        }
+
+        &:hover {
+            .btnSlide  {    
+                &.right,
+                &.left {
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .wrapImgSlideMain {
+        @include heightCalc('100vh - ' $heightHeader);
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapSlideMain {
+        position: relative;
+        
+        .btnSlide  {    
+            &.right,
+            &.left {
+                top: 50%;
+                bottom: auto;
+                @include translate(0, -50%);
+            }
+        
+            &.right {
+                right: 15px;
+                left: auto
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .wrapImgSlideMain {
+        height: auto;
+        padding-top: 56.25%;
+    }
+}

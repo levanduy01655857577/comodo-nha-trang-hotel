@@ -1,0 +1,187 @@
+.footer {
+    .wrapLogo {
+        text-align: center;
+        background-color: $color1;
+        padding: 30px 0;
+
+        img {
+            height: 150px;
+            width: auto;
+            display: inline-block;
+        }
+    }
+
+    .wrapText {
+        background-color: $color8;
+        padding-top: 15px;
+        overflow: hidden;
+
+        .wrapCircle {
+            background-color: $color3;
+
+            .imgFooterCircle {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        .containerItem {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contentItem {
+            padding-bottom: 60px;
+        }
+    }
+
+    .textAbout {
+        text-align: center;
+        color: $color1;
+
+        .titleFooter {
+            font-size: 30px;
+            line-height: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .textItem {
+            p {
+                margin: 5px 0 0 0;
+            }
+    
+            a {
+                color: $color1;
+                text-decoration: none;
+                @include transition(0.5s);
+    
+                &:hover {
+                    color: $color20;
+                }
+            }
+
+        }
+    }
+
+    .social {
+        @include clearfix();
+        display: table;
+        margin: 15px auto auto auto;
+
+        .linkItem {
+            @include borderRadius(100%);
+            width: 40px;
+            height: 40px;
+            background-color: $color3;
+            color: $color1;
+            padding: 8px 0;
+            text-align: center;
+            margin-left: 10px;
+            float: left;
+            @include transition(0.5s);
+            border: 1px solid;
+
+            svg {
+                height: 20px;
+                display: inline-block;
+                width: 28px;
+            }
+
+            img {
+                height: 20px;
+                width: auto;
+                display: inline-block;
+            }
+
+            &.Facebook {
+                border-color: $colorFacebook;
+                background-color: $colorFacebook;
+
+                &:hover {
+                    background-color: $color1;
+                    color: $colorFacebook;
+                }
+            }
+
+            &.Youtube {
+                border-color: $colorYoutube;
+                background-color: $colorYoutube;
+
+                &:hover {
+                    background-color: $color1;
+                    color: $colorYoutube;
+                }
+            }
+
+            &.Twitter {
+                border-color: $colorTwitter;
+                background-color: $colorTwitter;
+
+                &:hover {
+                    background-color: $color1;
+                    color: $colorTwitter;
+                }
+            }
+
+            &.Vimeo {
+                border-color: $colorVimeo;
+                background-color: $colorVimeo;
+
+                &:hover {
+                    background-color: $color1;
+                    color: $colorVimeo;
+                }
+            }
+
+            &.Instagram {
+                border-color: $colorInstagram;
+                background-color: $colorInstagram;
+
+                &:hover {
+                    background-color: $color1;
+                    color: $colorInstagram;
+                }
+            }
+
+            &.TripAdvisor {
+                border-color: $colorTripAdvisor;
+                background-color: $colorTripAdvisor;
+
+                &:hover {
+                    background-color: $color1;
+                    color: $colorTripAdvisor;
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {    
+        .wrapText {    
+            .contentItem {
+                padding: 15px 0 30px 0;
+            }
+        }
+
+        .textAbout {    
+            .titleFooter {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .social {
+            .linkItem {
+                margin-left: 5px;
+            }
+        }
+    }
+}

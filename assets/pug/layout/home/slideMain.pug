@@ -1,0 +1,12 @@
+// slide main
+.wrapSlideMain
+    .showSlideMain
+        each item in data_page.slide_main
+            .elementSlideMain
+                .contentElSlidemain
+                    .wrapImgSlideMain.wrapImgResize
+                        img(src= item.url_img alt= item.title_main)
+    |
+    |
+    include form_book_room
+// end slide main

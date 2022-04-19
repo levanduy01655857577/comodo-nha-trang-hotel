@@ -1,0 +1,63 @@
+.wrapFormBookRoom {
+    position: absolute;
+    width: 250px;
+    right: 15px;
+    top: 50%;
+    @include translate(0, -50%);
+    z-index: 990;
+    @include boxShadow($boxShadow3);
+    padding: 15px;
+    @include borderRadius(10px);
+    background-color: $color13;
+
+    .titleSub {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    .titleMain {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .colItem {
+        margin-top: 5px;
+    }
+
+    .btnBook {
+        display: block;
+        width: 100%;
+        @include borderRadius(5px);
+        padding: 4px 20px;
+        margin-top: 10px;
+    }
+
+    .formContent {
+        .inputItem {
+            font-size: 12px;
+            line-height: 28px;
+            height: 28px;
+            padding: 0 5px 0 30px;
+        }
+
+        .lblItem {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .iconItem {
+            left: 5px;
+
+            svg {
+                height: 28px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapFormBookRoom {    
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+.wrapSubscribe {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .bgItem {
+        background-color: $color21;
+    }
+
+    .rowItem {
+        margin-top: 5px;
+    }
+
+    .formContent {
+        .inputItem {
+            padding: 0 15px;
+            height: 54px;
+            line-height: 54px;
+        }
+
+        .inputGroupItem{
+            border-color: $color1;
+            background-color: $color1;
+        }
+    }
+
+    .btnSubscribe {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapSubscribe {
+        .rowItem {
+            width: 551px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapSubscribe {
+        .rowItem {
+            margin: 10px -7.5px 0 -7.5px;
+        }
+
+        .colItem {
+            padding: 0 7.5px;
+        }
+
+        .btnSubscribe {
+            padding: 15px 5px;
+        }
+    }
+}

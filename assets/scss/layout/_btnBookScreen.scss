@@ -1,0 +1,117 @@
+@keyframes ripple-wave-book {
+    $colorShadow: $color26;
+
+    0% {
+        box-shadow:
+            0 0 $colorShadow,
+            0 0 0 5px $colorShadow,
+            0 0 0 15px $colorShadow;
+        opacity: 1;
+    }
+    50% {
+        box-shadow:
+            0 0 0 10px $colorShadow,
+            0 0 0 20px $colorShadow,
+            0 0 0 30px $colorShadow;
+        opacity: 1;
+    }
+    95% {        
+        opacity: 0;
+    }
+    100% {
+        box-shadow:
+            0 0 $colorShadow,
+            0 0 0 5px $colorShadow,
+            0 0 0 15px $colorShadow;
+        opacity: 1;
+    }
+}
+
+.wrapBtnBookScreen {
+    position: fixed;
+    bottom: 40px;
+    left: 15px;
+    z-index: 990;
+
+    svg {
+        display: inline-block;
+        width: 17px;
+        height: 32px;
+        margin-right: 30px;
+        position: relative;
+        z-index: 3;
+    }
+
+    a {
+        @include transition(0.5s);
+        color: $color1;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+        padding: 10px 20px 10px 18px;
+        @include borderRadius(30px);
+        background-color: $color3;
+        border: 2px solid $color3;
+        position: relative;
+        @include boxShadow($boxShadow2);
+
+        &::before {
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            width: 42px;
+            height: 42px;
+            content: '';
+            background-color: $color25;
+            @include borderRadius(100%);
+            z-index: 1;
+        }
+
+        &::after {
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            width: 42px;
+            height: 42px;
+            content: '';
+            @include borderRadius(100%);
+            z-index: 0;
+            animation: ripple-wave-book 3s linear infinite;
+            animation-play-state: running;
+        }
+
+        &:hover {
+            background-color: $color1;
+            color: $color3;
+
+            svg {
+                color: $color1;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px){
+    .wrapBtnBookScreen {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        a {
+            text-align: center;
+            @include borderRadius(0);
+            padding: 20px 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        svg {
+            display: none;
+        }
+    }
+}

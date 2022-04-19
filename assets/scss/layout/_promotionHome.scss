@@ -1,0 +1,100 @@
+.wrapPromotion {
+    .colItem {
+        .itemContent {
+            background-color: $color1;
+        }
+
+        .wrapImg {
+            overflow: hidden;
+    
+            .wrapImgResize {
+                @include transition(0.5s);
+            }
+            
+            &:hover {
+                .wrapImgResize {
+                    @include transform(scale(1.2));
+                }
+            }
+        }
+
+        .colText {
+            .contentCol {
+                padding: 30px;
+            }
+        }
+
+        .sumary,
+        .linkTitle {
+            text-align: center;
+        }
+
+        .sumary {
+            @include splitText(3, 66px);
+            margin: 10px 0 0 0;
+        }
+        
+        .btnViewMore {
+            display: table;
+            margin: 15px auto auto auto;
+        }
+
+        .linkTitle {
+            font-size: 24px;
+            line-height: 30px;
+            @include splitText(3, 90px);
+        }
+
+        .titleMain {
+            padding-bottom: 10px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                @include translate(-50%, 0);
+                width: 50px;
+                height: 3px;
+                background-color: $color3;
+                content: '';
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapPromotion {
+        .listItem  {
+            margin-top: 30px;
+        }
+    
+        .colItem {    
+            &:nth-child(2n + 1) {
+                .colText {
+                    @include order(-1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapPromotion {    
+        .colItem {
+            margin-top: 15px;
+
+            .colText {
+                .contentCol {
+                    padding: 15px;
+                }
+            }
+
+            .linkTitle {
+                font-size: 18px;
+                line-height: 24px;
+                @include splitText(3, 72px);
+            }
+        }
+    }
+}

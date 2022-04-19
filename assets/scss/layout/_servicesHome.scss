@@ -1,0 +1,190 @@
+@mixin showTextService() {
+    .wrapImg {        
+        .wrapImgResize {
+            @include transform(scale(1.2));
+
+            img {
+                @include opacity(0.4);
+            }
+        }
+    }
+
+    .wrapText {
+        @include opacity(1);
+    }
+
+    .titleMain,
+    .btnWatchMore {
+        @include translate(0, 0);
+    }
+}
+
+.wrapServices {
+    overflow: hidden;
+
+    .wrapSlideItem {
+        margin: 0 -35px;
+        margin-top: 30px;
+    }
+
+    .itemSlide {
+        .wrapText {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            top: 50%;
+            @include translate(0, -50%);
+            @include opacity(0);
+        }
+
+        .wrapImg {
+            overflow: hidden;
+            position: relative;
+            @include borderRadius(10px);
+            background-color: $color3;
+
+            .wrapImgResize {
+                @include transition(0.5s);
+
+                img {
+                    @include transition(0.5s);
+                }
+            }
+        }
+
+        .contentSlide {
+            @include boxShadow($boxShadow3);
+            position: relative;
+            @include transform(scale(0.8));
+            @include transition(0.5s);
+    
+            &:hover {
+                @include showTextService();
+            }
+        }
+
+        .btnWatchMore {
+            margin-top: 15px;
+        }
+
+        .wrapText,
+        .titleMain,
+        .btnWatchMore {
+            @include transition(0.5s);
+        }
+
+        .wrapSummary {
+            margin: 15px 0 0 0;
+            @include splitText(3, 66px);
+            color: $color1
+        }
+
+        .linkTitle {
+            color: $color1;
+
+            &:hover {
+                color: $color20;
+            }
+        }
+
+        .btnWatchMore {
+            @include translate(0, 30px);
+        }
+
+        .titleMain {
+            @include translate(0, -30px);
+        }
+
+        &.slick-center {
+            .contentSlide {
+                @include transform(scale(1));
+                @include showTextService();
+            }
+        }
+    }
+
+    .btnSlide  {
+        $valPostion: -27px;
+    
+        &.left {
+            left: $valPostion;
+        }
+    
+        &.right {
+            right: $valPostion;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .wrapServices {    
+        .btnSlide  {
+            $valPostion: 20px;
+        
+            &.left {
+                left: $valPostion;
+            }
+        
+            &.right {
+                right: $valPostion;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 991px) {
+    .wrapServices {
+        .btnSlide  {
+            $valPostion: 35px;
+
+            &.left {
+                left: $valPostion;
+            }
+        
+            &.right {
+                right: $valPostion;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .wrapServices {
+        .wrapSlideItem {
+            margin-top: 15px;
+        }
+
+        .btnSlide  {        
+            $valPostion: 40px;
+
+            &.left {
+                left: $valPostion;
+            }
+        
+            &.right {
+                right: $valPostion;
+            }
+        }
+
+        .itemSlide {
+            .linkTitle {
+                font-size: 18px;
+                line-height: 24px
+            }
+
+            .wrapSummary {
+                font-size: 12px;
+                line-height: 18px;
+                @include splitText(3, 54px);
+            }
+
+            .btnWatchMore {
+                padding: 10px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}

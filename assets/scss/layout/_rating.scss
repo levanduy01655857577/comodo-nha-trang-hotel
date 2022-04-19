@@ -1,0 +1,41 @@
+.fm-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star-rating {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.rating-stars {
+    display: block;
+    line-height: 0;
+}
+
+.farmart-svg-icon {
+    display: inline-flex;
+    color: #999;
+
+    svg {
+        vertical-align: -0.125em;
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        fill: currentColor;
+    }
+}
+
+.user-rating {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    .farmart-svg-icon {
+        color: #fab528;
+    }
+}

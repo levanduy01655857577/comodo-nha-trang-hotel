@@ -1,0 +1,513 @@
+.pageRoomDetail {
+    padding: 60px 0;
+    .colText {
+        .contentItem {
+            overflow: hidden;
+            @include borderRadius(15px);
+            @include boxShadow($boxShadow3);
+        }
+
+        .wrapImg {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .titleItem {
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: 800;
+            color: $color2;
+            text-transform: uppercase;
+            margin: 0;
+            &.titlePrice{
+                display: flex;
+                justify-content: space-between;
+                .wrapPrice{
+                    color: $color20;
+                }
+            }
+        }
+
+        .wrapBtnLike {
+            margin-top: 10px;
+        }
+
+        .btnLike {
+            font-size: 14px;
+            line-height: 20px;
+
+            svg {
+                left: 15px;
+            }
+        }
+        
+        .infoNumberItem {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: $color14;
+            line-height: 22px;
+
+            .itemInfoNumber {
+                &.user,
+                &.date,
+                &.view {
+                    display: inline-block;
+                    position: relative;
+                    padding-right: 30px;
+    
+                    // &::after {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 4px;
+                    //     height: 16px;
+                    //     width: 1px;
+                    //     background-color: $color14;
+                    //     right: 15px;
+                    // }
+                }
+
+                &.share {
+                    display: inline-flex;
+                    position: relative;
+                    padding-right: 30px;
+    
+                    // &::after {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 4px;
+                    //     height: 16px;
+                    //     width: 1px;
+                    //     background-color: $color14;
+                    //     right: 15px;
+                    // }
+                }
+
+                svg {
+                    width: 20px;
+                    height: 15px;
+                    margin-right: 5px;
+                    @include translate(0, -2px);
+                }
+            }
+        }
+
+        .desItem {
+            padding: 15px;
+            font-size: 18px;
+            line-height: 24px;
+            background-color: $color4;
+            border-left: 5px solid $color20;
+            margin: 15px 0 0 0;
+            @include borderRadius(0 5px 5px 0);
+            text-align: justify;
+        }
+
+        .contentText {
+            background-color: $color1;
+            padding: 15px;
+        }
+
+        .wrapText {
+            margin-top: 15px;
+            @include customText1();
+
+            iframe{
+                max-width: 100%;
+                border: none;
+            }
+        }
+    }
+
+    .colPost {
+        .itemPost {
+            background-color: $color1;
+            padding: 15px;
+            @include borderRadius(5px);
+            @include boxShadow($boxShadow3);
+            margin-top: 15px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .titleItem {
+                margin: 0;
+                svg {
+                    width: 20px;
+                    height: 15px;
+                    @include translate(0, -2px);
+                }
+            }
+
+            .wrapImg {
+                width: 126px;
+                @include transition(0.5s);
+
+                .wrapImgResize {
+                    @include borderRadius(5px);
+                }
+            }
+
+            .linkTitleItem {
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 700;
+                color: $color2;
+                text-align: left;
+                text-transform: unset;
+                @include splitText(2, 44px);
+            }
+
+            .media-body {
+                padding-left: 10px;
+            }
+
+            .date {
+                font-size: 16px;
+                line-height: 22px;
+                margin: 5px 0 0 0;
+                color: $color5;
+
+                svg {
+                    width: 20px;
+                    height: 15px;
+                    margin-right: 5px;
+                    @include translate(0, -2px);
+                }
+            }
+
+            .media {
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 1px solid $color7;
+
+                &:first-child {
+                    padding-top: 0;
+                    border-top: none;
+                }
+
+                &:hover {
+                    .wrapImg {
+                        @include opacity(0.6);
+                    }
+
+                    .linkTitleItem {
+                        color: $color20;
+                    }
+                }
+            }
+            .formContent{
+                margin-top: 15px;
+                .btnBook{
+                    width: 100%;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .item {
+            .listItem {
+                .titleItem {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    border-top: 1px solid $color7;
+    
+                    &:first-child {
+                        padding-top: 0;
+                        border-top: none;
+                    }
+    
+                    &:hover {
+                        .linkTitleItem {
+                            color: $color20;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .group-btn-share{
+        margin-top: 10px;
+    }
+
+    .rate {
+        span{
+            font-size: 14px;
+            color: $color2;
+            float: right;
+        }
+        position: relative;
+        float: left;
+        height: 46px;
+        padding: 0 10px 0 0;
+        &:not(:checked) {
+            >input {
+                position: absolute;
+                display: none;
+            }
+            >label {
+                float: right;
+                width: 1em;
+                overflow: hidden;
+                white-space: nowrap;
+                cursor: pointer;
+                font-size: 30px;
+                color: #ccc;
+                &:before {
+                    content: '★ ';
+                }
+                &:hover {
+                    color: #deb217;
+                    ~ {
+                        label {
+                            color: #deb217;
+                        }
+                    }
+                }
+            }
+        }
+        >input {
+            &:checked {
+                ~ {
+                    label {
+                        color: #ffc700;
+                        &:hover {
+                            color: #c59b08;
+                            ~ {
+                                label {
+                                    color: #c59b08;
+                                }
+                            }
+                        }
+                    }
+                }
+                + {
+                    label {
+                        &:hover {
+                            color: #c59b08;
+                            ~ {
+                                label {
+                                    color: #c59b08;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >label {
+            &:hover {
+                ~ {
+                    input {
+                        &:checked {
+                            ~ {
+                                label {
+                                    color: #c59b08;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 991px) {
+    .pageRoomDetail {
+        padding: 30px 0;
+        .colText {    
+            .titleItem {
+                font-size: 20px;
+                line-height: 30px;
+                &.titlePrice{
+                    flex-direction: column;
+                    gap: 15px;
+                }
+            }
+
+            .infoNumberItem {
+                font-size: 14px;
+                line-height: 20px;
+    
+                .itemInfoNumber {
+                    &.user,
+                    &.date,
+                    &.view {        
+                        &::after {
+                            height: 14px;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+    
+            .desItem {
+                font-size: 14px;
+                line-height: 20px;
+            }
+    
+            .wrapText {
+                @include customTextMB1();
+            }
+            &.order-last{
+                order: unset;
+            }
+        }
+    
+        .colPost {
+            margin-top: 15px;
+
+            .itemPost {
+                .titleMainItem {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                .wrapImg {
+                    width: 126px;
+                    @include transition(0.5s);
+                }
+    
+                .linkTitleItem {
+                    font-size: 14px;
+                    line-height: 20px;
+                    @include splitText(2, 40px);
+                }
+    
+                .date {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                &.formBookRoom{
+                    display: none;
+                }
+            }
+    
+            .item {
+                .listItem {
+                    .linkTitleItem {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .pageRoomDetail {
+        .colText {            
+            .infoNumberItem {    
+                .itemInfoNumber {
+                    &.user,
+                    &.date,
+                    &.view {        
+                        display: block;
+                        margin-bottom: 5px;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &.share{
+                        display: flex;
+                        margin-bottom: 5px;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Slide
+.pageRoomDetail {
+	.colSlideImg {
+		.wrapProductSlideImg {
+			background-color: $color1;
+
+			.loading {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80px;
+				height: 80px;
+				@include translate(-50%, -50%);
+				z-index: 0;
+			}
+		}
+	}
+    .btnSlideType1{
+        border: 2px solid $color20;
+        color: $color20;
+        &:hover{
+            color: white;
+            background-color: $color20;
+        }
+    }
+    .listAmenitiesRoomDetail{
+        padding: 0;
+        list-style: none;
+        max-width: 100%;
+
+        .colItemAmenitiesRoomDetail{
+            margin-top: 15px;
+
+            .contentItemAmenitiesRoomDetail{
+                position: relative;
+                padding-left: 25px;
+
+                .wrapicTienIchPhong{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    img{
+                        width: 20px;
+                        height: auto;
+                    }
+                }
+
+                .textTienIchPhong {
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #333;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.wrapInfoNumber {
+    font-size: 12px;
+    line-height: 24px;
+    .contentColInfo{
+        white-space: nowrap;
+    }
+    svg {
+        width: 15px;
+        height: 15px;
+        color: $color20;
+        display: inline-block;
+        margin-right: 5px;
+        @include translate(0, -2px);
+    }
+}
+
+
+@media (max-width: 1199px) {
+        .wrapInfoNumber {
+            font-size: 12px;
+            line-height: 18px;
+        }
+}

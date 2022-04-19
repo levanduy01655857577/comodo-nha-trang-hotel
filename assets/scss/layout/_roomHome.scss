@@ -1,0 +1,210 @@
+.wrapRoom {
+    .contentColInfo {
+        @include clearfix();
+    }
+
+    .wrapPrice {
+        color: $color3;
+        margin: 15px 0 0 0;
+        text-align: right;
+        display: table;
+        float: right;
+        clear: both;
+
+        &.old {
+            color: $color5;
+            position: relative;
+            font-weight: 400;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color5;
+                content: '';
+                @include transform(rotate(-5deg) translate(0, -50%));
+            }
+        }
+    }
+
+    .btnBook {
+        margin-top: 15px;
+        float: right;
+        clear: both;
+    }
+
+    .listItem {
+        margin-top: 30px;
+    }
+
+    .colItemRoom {
+        margin-top: 30px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .itemRoom {
+        background-color: $color1;
+        padding: 15px;
+        @include borderRadius(10px);
+        @include boxShadow($boxShadow3);
+
+        .colText  {
+            position: relative;
+            z-index: 0;
+        }
+
+        .colImg {
+            position: relative;
+            z-index: 1;
+
+            .reviewImgRoom {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 131%;
+                overflow: hidden;
+                @include borderRadius(5px);
+                display: none
+            }
+
+            .contentCol {
+                @include clearfix();
+                overflow: hidden;
+                @include borderRadius(5px);
+            }
+
+            .wrapImg{
+                float: left;
+                @include widthCalc('33.3333333% - 4px');
+                margin-top: 6px;
+
+                &:nth-child(3) {
+                    margin-left: 6px;
+                    margin-right: 6px;
+                }
+
+                &:first-child {
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .sumary {
+            margin: 15px 0 0 0;
+            @include splitText(2, 44px);
+            color: $color12;
+        }
+
+        .btnLinkItem {
+            margin-top: 15px;
+        }
+
+        .wrapTextInfo {
+            margin-top: 15px;
+
+            p {
+                margin: 15px 0 0 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapRoom {
+        .colItemRoom {    
+            &:nth-child(2n) {
+                .itemRoom {
+                    .colText {
+                        @include order(-1);
+                    }
+
+                    .colImg {            
+                        .reviewImgRoom {
+                            left: auto;
+                            right: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapRoom {
+        .colItemRoom {
+            .itemRoom {
+                .colImg {
+                    .contentCol {        
+                        &:hover {
+                            ~ .reviewImgRoom {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .wrapRoom {
+        .listItem {
+            margin-top: 0;
+        }
+
+        .wrapPrice  {
+            margin: 10px 0 0 0;
+        }
+
+        .colItemRoom {
+            margin-top: 15px;
+
+            &:first-child {
+                margin-top: 15px;
+            }
+        }
+
+        .itemRoom {    
+            .sumary {
+                margin: 10px 0 0 0;
+            }
+    
+            .btnLinkItem {
+                margin-top: 10px;
+            }
+    
+            .wrapTextInfo {
+                margin-top: 10px;
+    
+                p {
+                    margin: 10px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapRoom {
+        .itemRoom {    
+            height: 100%;
+
+            .linkTitle {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        .colText {
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+// award
+.wrapAward.wrapContent1.bgColor1
+    .container-xl.containerItem
+        .contentItem
+            +render_title('Award', 'our Award')
+
+            .wrapSlideItem  
+                .showSlideAward
+                    each item in data_page.award 
+                        .itemSlide 
+                            .contentSlide
+                                .wrapImg
+                                    a.wrapImgResize.img16And9(href= item.link title= item.title)
+                                        img(src= item.img alt= item.title)
+                                |
+                                |
+                                .wrapText 
+                                    h5.titleItem1.titleMain 
+                                        a.linkTitleItem2.linkTitle(href= item.link title= item.point)= item.point
+                                    |
+                                    |
+                                    .wrapStar 
+                                        .fm-rating
+                                            .star-rating
+                                                span.max-rating.rating-stars
+                                                    - for(i = 1; i <= 5; i++)
+                                                        span.farmart-svg-icon
+                                                            svg(aria-hidden='true' role='img' focusable='false' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='currentColor')
+                                                                polygon(points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2')
+                                                    
+                                                span.user-rating.rating-stars(style='width:80%')
+                                                    - for(i = 1; i <= 5; i++)
+                                                        span.farmart-svg-icon
+                                                            svg(aria-hidden='true' role='img' focusable='false' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='currentColor')
+                                                                polygon(points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2')
+                                    |
+                                    |
+                                    a.btn6.btnSeeAll(href= item.link, title='193 reviews') 193 reviews
+// end award

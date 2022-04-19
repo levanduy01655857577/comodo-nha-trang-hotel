@@ -1,0 +1,240 @@
+.btn5,
+.btn3,
+.btn2,
+.btn1 {
+    text-transform: uppercase;
+    color: $color1;
+    background-color: $color3;
+    font-weight: 700;
+    @include borderRadius(5px);
+    @include transition(0.5s);
+    padding: 15px 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    border: 2px solid $color3;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        @include translate(0, -2px);
+        margin-left: 2px;
+    }
+
+    &:hover {
+        background-color: $color1;
+        color: $color3;
+    }
+}
+
+.btn3,
+.btn2 {
+    padding: 15px 30px;
+}
+
+.btn3 {
+    background-color: $color1;
+    color: $color3;
+    border-color: $color3;
+
+    &:hover {
+        background-color: $color3;
+        color: $color1;
+    }
+}
+
+.btn4 {
+    text-transform: uppercase;
+    color: $color3;
+    background-color: transparent;
+    font-weight: 700;
+    @include transition(0.5s);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include transition(0.5s);
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: $color8;
+    }
+
+    svg {
+        width: 15px;
+        height: 15px;
+        @include translate(0, -2px);
+        margin-left: 2px;
+    }
+
+    &:hover {
+        color: $color8;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.btn5 {
+    background-color: transparent;
+    border-color: $color1;
+    color: $color1;
+    padding: 15px;
+}
+
+.btn6 {
+    text-transform: uppercase;
+    color: $color3;
+    background-color: transparent;
+    font-weight: 700;
+    @include transition(0.5s);
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+        color: $color20;
+    }
+}
+
+// btn slide
+.btnSlideType1 {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    background-color: $color3;
+    border: none;
+    z-index: 800;
+    @include transition(0.5s);
+    display: inline-block;
+    text-align: center;
+    @include translate(0, -50%);
+    @include transition(0.5s);
+    color: $color1;
+    width: 50px;
+    height: 50px;
+    @include borderRadius(100%);
+    border: 2px solid $color3;
+    text-align: center;
+
+    $valPostion: -51px;
+
+    svg {
+        width: 18px;
+        height: 46px;
+        display: inline-block;
+    }
+    
+    &.left {
+        left: $valPostion;
+    }
+
+    &.right {
+        right: $valPostion;
+    }
+
+    &:hover {
+        color: $color1;
+        background-color: $color8;
+        border-color: $color8;
+    }
+}
+
+.dotsSlide1 {
+    padding-bottom: 40px;
+    
+    .slick-dots {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        @include translate(-50%, 0);
+        z-index: 500;
+
+        li {
+            display: inline-block;
+            width: 40px;
+            height: 10px;
+            position: relative;
+            margin: 0;
+            cursor: pointer;
+
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%, -50%);
+                content: '';
+                width: 30px;
+                height: 10px;
+                background-color: $color6;
+                @include transition(0.5s);
+                @include borderRadius(30px);
+            }
+
+            &.slick-active,
+            &:hover {
+                &:after {
+                    background-color: $color20;
+                    width: 40px;
+                }
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 1199px){
+    // btn slide
+    .btnSlideType1 {
+        $valPostion: 0;
+        width: 40px;
+        height: 40px;
+
+        svg {
+            width: 15px;
+            height: 36px;
+            display: inline-block;
+        }
+        
+        &.left {
+            left: $valPostion;
+        }
+
+        &.right {
+            right: $valPostion;
+        }
+    }
+
+    .dotsSlide1 {
+        .slick-dots {
+            bottom: 10px;
+        }
+    }
+}
+
+@media(max-width: 991px){
+    // btn slide
+    .btnSlideType1 {
+        $valPostion: -6px;
+        
+        &.left {
+            left: $valPostion;
+        }
+
+        &.right {
+            right: $valPostion;
+        }
+    }
+}
