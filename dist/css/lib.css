@@ -10951,7 +10951,7 @@ strong {
 }
 
 .linkMenuHeader {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 22px;
   color: #8b0021;
   display: block;
@@ -10964,8 +10964,9 @@ strong {
   -o-transition: 0.5s;
 }
 .linkMenuHeader .linkMenuHeaderImg {
-  height: 15px;
+  height: 20px;
   margin-right: 5px;
+  transform: translateY(-2px);
 }
 
 .wrapBtnCtrMenuHeader {
@@ -11519,7 +11520,7 @@ strong {
     margin-left: 15px;
   }
   .fixedMenu .linkMenuHeader {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 @media (max-width: 1199px) {

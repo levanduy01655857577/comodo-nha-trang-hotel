@@ -113,7 +113,7 @@ $MrLeftItemMenu: 20px;
 }
 
 .linkMenuHeader{
-    font-size: 12px;
+    font-size: 11px;
     line-height: 22px;
     color: $color3;
     display: block;
@@ -121,8 +121,9 @@ $MrLeftItemMenu: 20px;
     text-transform: uppercase;
     @include transition(0.5s);
     .linkMenuHeaderImg{
-        height: 15px;
+        height: 20px;
         margin-right: 5px;
+        transform: translateY(-2px);
     }
 }
 
@@ -671,7 +672,7 @@ $MrLeftItemMenu: 20px;
         }
 
         .linkMenuHeader {
-            font-size: 12px;
+            font-size: 11px;
         }
     }
 }
