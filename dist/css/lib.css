@@ -11804,6 +11804,9 @@ strong {
   .footer .textAbout .footerContent {
     flex-direction: column;
   }
+  .footer .textAbout .footerContent .footerContentItem .textItem {
+    text-align: center;
+  }
   .footer .textAbout .footerContent .footerContentItem:last-child {
     margin-top: 30px;
     flex-direction: column;

@@ -283,6 +283,9 @@
       .footerContent {
         flex-direction: column;
         .footerContentItem {
+          .textItem {
+            text-align: center;
+          }
           &:last-child {
             margin-top: 30px;
             flex-direction: column;
