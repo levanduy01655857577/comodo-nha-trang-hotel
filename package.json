@@ -38,6 +38,8 @@
         "@babel/preset-env": "^7.16.5",
         "@babel/register": "^7.16.5",
         "gulp-sass": "^5.0.0",
+        "postcss": "^8.4.12",
+        "postcss-loader": "^6.2.1",
         "sass": "^1.45.1"
     }
 }

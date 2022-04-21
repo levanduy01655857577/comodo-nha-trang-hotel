@@ -93,7 +93,9 @@ mixin menu_main(data_menu, loop)
 
                 if item.children
                     li.itemMenuHeader.menuSub
-                        a.linkMenuHeader(href= item.link, title= item.title, class=check_scroll ? 'scroll' : '')= item.title
+                        a.linkMenuHeader(href= item.link, title= item.title, class=check_scroll ? 'scroll' : '')
+                            img(src= item.icon).linkMenuHeaderImg
+                            = item.title
 
                         a.btnDropdownMenuSub(href='javascript:void(0);' title='Dropdown')
                             svg(aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 320 512')
@@ -102,7 +104,9 @@ mixin menu_main(data_menu, loop)
                         +menu_main(item.children, 1)
                 else
                     li.itemMenuHeader
-                        a.linkMenuHeader(href= item.link, title= item.title, class=check_scroll ? 'scroll' : '')= item.title
+                        a.linkMenuHeader(href= item.link, title= item.title, class=check_scroll ? 'scroll' : '')
+                            img(src= item.icon).linkMenuHeaderImg
+                            = item.title
 
 mixin render_paging(quantily = 5)
     - var number_paging = 0;

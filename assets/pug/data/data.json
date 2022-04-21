@@ -47,6 +47,7 @@
 			],
 			"menu": [
 				{
+					"icon": "images/icons/accommodation.png",
 					"title": "Accommodation",
 					"link": "javascript:void(0);",
 					"children": [
@@ -77,18 +78,22 @@
 					]
 				},
 				{
+					"icon": "images/icons/restaurant.png",
 					"title": "Restaurant & Bar",
 					"link": "javascript:void(0);"
 				},
 				{
+					"icon": "images/icons/Conference.png",
 					"title": "Conference & Events",
 					"link": "javascript:void(0);"
 				},
 				{
+					"icon": "images/icons/spa.png",
 					"title": "Spa",
 					"link": "javascript:void(0);"
 				},
 				{
+					"icon": "images/icons/services.png",
 					"title": "Services",
 					"link": "javascript:void(0);",
 					"children": [
@@ -107,14 +112,17 @@
 					]
 				},
 				{
+					"icon": "images/icons/news.png",
 					"title": "News",
 					"link": "javascript:void(0);"
 				},
 				{
+					"icon": "images/icons/Promotion.png",
 					"title": "Promotion",
 					"link": "javascript:void(0);"
 				},
 				{
+					"icon": "images/icons/Gallery.png",
 					"title": "Gallery",
 					"link": "javascript:void(0);",
 					"children": [
@@ -129,6 +137,7 @@
 					]
 				},
 				{
+					"icon": "images/icons/Contact.png",
 					"title": "Contact",
 					"link": "javascript:void(0);"
 				}

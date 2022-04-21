@@ -1,59 +1,76 @@
 // footer
 .footer
-    .wrapLogo
-        img(src= data.footer.logo, alt= data.general.title_website)
+
+    //- .wrapLogo
+    //-     img(src= data.footer.logo, alt= data.general.title_website)
     |
     |
     .wrapText
+        .footerLogo 
+            img.footerLogoImg(src="/images/logo/logo-compodo-white.png")
         .wrapCircle
-            img.imgFooterCircle(data-img-main="images/banner/footer.jpg" data-img-ds="images/banner/footer-ds.jpg" data-img-ip="images/banner/footer-ip.jpg" data-img-mb-h="images/banner/footer-mb-h.jpg" data-img-mb-v="images/banner/footer-mb-v.jpg" data-img-mb-v-1="images/banner/footer-mb-v-1.jpg" alt='Circle')
+            img.imgFooterCircle.imgFooterCircleReverse(data-img-main="images/banner/footer.jpg" data-img-ds="images/banner/footer-ds.jpg" data-img-ip="images/banner/footer-ip.jpg" data-img-mb-h="images/banner/footer-mb-h.jpg" data-img-mb-v="images/banner/footer-mb-v.jpg" data-img-mb-v-1="images/banner/footer-mb-v-1.jpg" alt='Circle')
 
             .container-xl.containerItem
                 .contentItem
                     .textAbout
                         p.titleFooter Comodo Nha Trang Hotel
+                        .footerContent
+                            .footerContentItem
+                                .textItem
+                                    p Address: <a href="https://www.google.com/maps/place/Comodo+Nha+Trang+Hotel/@12.2310292,109.198016,15z/data=!4m8!3m7!1s0x0:0x7a45268002c3c243!5m2!4m1!1i2!8m2!3d12.2310292!4d109.198016" title="86A Tran Phu Str, Loc Tho Ward, Nhatrang City, Khanh Hoa Pro, Vietnam" target="_blank">86A Tran Phu Str, Loc Tho Ward, Nhatrang City, Khanh Hoa Pro, Vietnam</a>
 
-                        .textItem
-                            p Address: <a href="https://www.google.com/maps/place/Comodo+Nha+Trang+Hotel/@12.2310292,109.198016,15z/data=!4m8!3m7!1s0x0:0x7a45268002c3c243!5m2!4m1!1i2!8m2!3d12.2310292!4d109.198016" title="86A Tran Phu Str, Loc Tho Ward, Nhatrang City, Khanh Hoa Pro, Vietnam" target="_blank">86A Tran Phu Str, Loc Tho Ward, Nhatrang City, Khanh Hoa Pro, Vietnam</a>
+                                    p Tel/Fax: <a href="tel:02583885789" title=" 0258 3885 789"> 0258 3885 789</a>
 
-                            p Tel/Fax: <a href="tel:02583885789" title=" 0258 3885 789"> 0258 3885 789</a>
+                                    p Email: <a href="mailto:info@comodonhatranghotel.com" title="info@comodonhatranghotel.com">info@comodonhatranghotel.com</a>
 
-                            p Email: <a href="mailto:info@comodonhatranghotel.com" title="info@comodonhatranghotel.com">info@comodonhatranghotel.com</a>
-
-                            p Website: <a href="www.comodonhatranghotel.com" title="www.comodonhatranghotel.com" target="_blank">www.comodonhatranghotel.com</a>
-                        |
-                        |
-                        .social 
-                            each item in data.footer.social
-                                a.linkItem(href= item.link, title= item.title, class= item.title, target= '_blank')
-                                    if(item.img)
-                                        svg(version='1.0' fill='currentColor' xmlns='http://www.w3.org/2000/svg' width='258.000000pt' height='161.000000pt' viewBox='0 0 258.000000 161.000000' preserveAspectRatio='xMidYMid meet')
-                                            g(transform='translate(0.000000,161.000000) scale(0.100000,-0.100000)' fill='#000000' stroke='none')
-                                                path(fill='currentColor' d='M1107 1590 c-207 -33 -417 -122 -576 -245 l-71 -55 -226 0 -225 0 35\
-                                                -45 c19 -25 51 -79 72 -119 l38 -73 -36 -54 c-47 -71 -52 -83 -78 -159 -29\
-                                                -90 -36 -224 -16 -320 65 -309 347 -525 662 -507 159 9 293 69 412 185 49 49\
-                                                67 61 73 50 5 -7 34 -61 64 -120 31 -60 58 -108 61 -108 3 0 30 53 61 117 31\
-                                                65 57 119 58 121 2 2 32 -25 68 -60 118 -116 252 -176 411 -185 315 -18 597\
-                                                198 662 507 20 96 13 230 -16 320 -26 76 -31 88 -78 158 l-35 53 24 51 c13 29\
-                                                45 82 71 120 l47 68 -224 0 -225 0 -71 55 c-132 102 -283 174 -460 220 -87 22\
-                                                -131 27 -264 30 -88 2 -186 0 -218 -5z m-342 -475 c172 -45 305 -179 350 -352\
-                                                65 -249 -94 -511 -350 -578 -251 -65 -513 94 -580 350 -89 343 237 669 580\
-                                                580z m1280 0 c172 -45 305 -179 350 -352 65 -249 -94 -511 -350 -578 -251 -65\
-                                                -513 94 -580 350 -89 343 237 669 580 580z')
-                                                path(fill='currentColor' d='M550 954 c-227 -82 -293 -362 -125 -529 65 -66 125 -90 225 -90 100\
-                                                0 160 24 225 90 66 65 90 125 90 225 0 100 -24 160 -90 225 -82 82 -222 116\
-                                                -325 79z m163 -158 c103 -43 128 -177 48 -257 -65 -65 -157 -65 -222 0 -124\
-                                                123 13 325 174 257z')
-                                                path(fill='currentColor' d='M595 705 c-16 -15 -25 -36 -25 -55 0 -19 9 -40 25 -55 49 -50 135\
-                                                -15 135 55 0 19 -9 40 -25 55 -15 16 -36 25 -55 25 -19 0 -40 -9 -55 -25z')
-                                                path(fill='currentColor' d='M1830 954 c-227 -82 -293 -362 -125 -529 65 -66 125 -90 225 -90 100\
-                                                0 160 24 225 90 66 65 90 125 90 225 0 100 -24 160 -90 225 -82 82 -222 116\
-                                                -325 79z m179 -172 c96 -71 95 -194 -2 -266 -20 -15 -43 -21 -77 -21 -139 0\
-                                                -202 175 -98 272 50 47 126 53 177 15z')
-                                                path(fill='currentColor' d='M1875 705 c-50 -49 -15 -135 55 -135 41 0 80 39 80 80 0 19 -9 40\
-                                                -25 55 -15 16 -36 25 -55 25 -19 0 -40 -9 -55 -25z')
-                                    else
-                                        +render_svg(item.icon)
+                                    p Website: <a href="www.comodonhatranghotel.com" title="www.comodonhatranghotel.com" target="_blank">www.comodonhatranghotel.com</a>
+                                |
+                                |
+                                .social 
+                                    each item in data.footer.social
+                                        a.linkItem(href= item.link, title= item.title, class= item.title, target= '_blank')
+                                            if(item.img)
+                                                svg(version='1.0' fill='currentColor' xmlns='http://www.w3.org/2000/svg' width='258.000000pt' height='161.000000pt' viewBox='0 0 258.000000 161.000000' preserveAspectRatio='xMidYMid meet')
+                                                    g(transform='translate(0.000000,161.000000) scale(0.100000,-0.100000)' fill='#000000' stroke='none')
+                                                        path(fill='currentColor' d='M1107 1590 c-207 -33 -417 -122 -576 -245 l-71 -55 -226 0 -225 0 35\
+                                                        -45 c19 -25 51 -79 72 -119 l38 -73 -36 -54 c-47 -71 -52 -83 -78 -159 -29\
+                                                        -90 -36 -224 -16 -320 65 -309 347 -525 662 -507 159 9 293 69 412 185 49 49\
+                                                        67 61 73 50 5 -7 34 -61 64 -120 31 -60 58 -108 61 -108 3 0 30 53 61 117 31\
+                                                        65 57 119 58 121 2 2 32 -25 68 -60 118 -116 252 -176 411 -185 315 -18 597\
+                                                        198 662 507 20 96 13 230 -16 320 -26 76 -31 88 -78 158 l-35 53 24 51 c13 29\
+                                                        45 82 71 120 l47 68 -224 0 -225 0 -71 55 c-132 102 -283 174 -460 220 -87 22\
+                                                        -131 27 -264 30 -88 2 -186 0 -218 -5z m-342 -475 c172 -45 305 -179 350 -352\
+                                                        65 -249 -94 -511 -350 -578 -251 -65 -513 94 -580 350 -89 343 237 669 580\
+                                                        580z m1280 0 c172 -45 305 -179 350 -352 65 -249 -94 -511 -350 -578 -251 -65\
+                                                        -513 94 -580 350 -89 343 237 669 580 580z')
+                                                        path(fill='currentColor' d='M550 954 c-227 -82 -293 -362 -125 -529 65 -66 125 -90 225 -90 100\
+                                                        0 160 24 225 90 66 65 90 125 90 225 0 100 -24 160 -90 225 -82 82 -222 116\
+                                                        -325 79z m163 -158 c103 -43 128 -177 48 -257 -65 -65 -157 -65 -222 0 -124\
+                                                        123 13 325 174 257z')
+                                                        path(fill='currentColor' d='M595 705 c-16 -15 -25 -36 -25 -55 0 -19 9 -40 25 -55 49 -50 135\
+                                                        -15 135 55 0 19 -9 40 -25 55 -15 16 -36 25 -55 25 -19 0 -40 -9 -55 -25z')
+                                                        path(fill='currentColor' d='M1830 954 c-227 -82 -293 -362 -125 -529 65 -66 125 -90 225 -90 100\
+                                                        0 160 24 225 90 66 65 90 125 90 225 0 100 -24 160 -90 225 -82 82 -222 116\
+                                                        -325 79z m179 -172 c96 -71 95 -194 -2 -266 -20 -15 -43 -21 -77 -21 -139 0\
+                                                        -202 175 -98 272 50 47 126 53 177 15z')
+                                                        path(fill='currentColor' d='M1875 705 c-50 -49 -15 -135 55 -135 41 0 80 39 80 80 0 19 -9 40\
+                                                        -25 55 -15 16 -36 25 -55 25 -19 0 -40 -9 -55 -25z')
+                                            else
+                                                +render_svg(item.icon)
+                            .footerContentItem
+                                .footerFanpage
+                                    iframe(src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FComodo-Nha-Trang-Hotel-1541350206166469&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' width='340' height='130' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share')
+                                .footerReview 
+                                    img.footerReviewLogo(src="/images/icons/Tripadvisor.png")
+                                    .footerReviewContent 
+                                        a.footerReviewLink(href="javascript:void(0);") Comodo Nha Trang Hotel
+                                        p.footerReviewText Đánh giá gần đây của khách du lịch 
+                                            span "Chuyến du lịch trong mùa Covid"
+                                        .footerReviewMoreWrap 
+                                            .footerReviewMore 
+                                                a(href="javascript:void(0);") Đọc đánh giá
+                                                a(href="javascript:void(0);") Viết đánh giá
 // end footer
 |
 |
