@@ -11739,6 +11739,7 @@ strong {
       -ms-user-select: none;
           user-select: none;
   display: block;
+  padding-inline: 4px;
 }
 .footer .footerReview .footerReviewContent {
   padding-inline: 5px;
