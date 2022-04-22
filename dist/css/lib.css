@@ -11320,6 +11320,7 @@ strong {
   .wrapBtnCtrMenuHeader .btnCtrMenu svg.iconClose {
     opacity: 0;
     filter: alpha(opacity=0);
+    color: #8b0021;
   }
 
   .activeMenu > .btnDropdownMenuSub {

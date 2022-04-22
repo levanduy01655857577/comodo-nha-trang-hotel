@@ -2,694 +2,694 @@ $MrLeftItemContact: 30px;
 $MrLeftItemMenu: 20px;
 
 .wrapHeader {
-    height: $heightHeader;
+  height: $heightHeader;
 }
 
 @media (max-width: 1199px) {
-    .wrapHeader {
-        height: 70px;
-    }
+  .wrapHeader {
+    height: 70px;
+  }
 }
 
 // header top
 .headerTop {
-    background-color: $color1;
+  background-color: $color1;
 
-    .contentRight,
-    .contentItem {
-        @include clearfix();
-    }
+  .contentRight,
+  .contentItem {
+    @include clearfix();
+  }
 
-    .contentRight {
-        float: right;
-        margin-top: 37px;
-    }
+  .contentRight {
+    float: right;
+    margin-top: 37px;
+  }
 
-    .wrapBtnCtr {
-        float: left;
-    }
+  .wrapBtnCtr {
+    float: left;
+  }
 }
 
 @media (max-width: 1199px) {
-    .contentHeader {
-        @include transition(0.5s);
-    }
-    
-    .headerTop {    
-        .contentRight {
-            margin-top: 0;
-            position: absolute;
-            top: 50%;
-            @include translate(0, -50%);
-            right: 0;
-            float: none;
-            z-index: 990;
-        }
+  .contentHeader {
+    @include transition(0.5s);
+  }
 
-        .contentItem {
-            position: relative;
-        }
+  .headerTop {
+    .contentRight {
+      margin-top: 0;
+      position: absolute;
+      top: 50%;
+      @include translate(0, -50%);
+      right: 0;
+      float: none;
+      z-index: 990;
     }
+
+    .contentItem {
+      position: relative;
+    }
+  }
 }
 // end header top
 
 // header bottom
 .contentHeaderBottom {
-    position: relative;
+  position: relative;
 }
 // end header bottom
 
 // logo
-.wrapLogoHeader{
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
-    overflow: hidden;
-    margin: 0;
-    @include transition(0.5s);
-    float: left;
+.wrapLogoHeader {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  overflow: hidden;
+  margin: 0;
+  @include transition(0.5s);
+  float: left;
 }
 
-.linkLogoHeader{
-    display: block;
-    padding: 10px 0;
+.linkLogoHeader {
+  display: block;
+  padding: 10px 0;
 }
 
-.imgLogoHeader{
-    height: 70px;
-    width: auto;
-    display: inline-block;
-    @include transition(0.5s);
+.imgLogoHeader {
+  height: 70px;
+  width: auto;
+  display: inline-block;
+  @include transition(0.5s);
 }
 
 .wrapLinkItemContact {
-    font-size: 16px;
-    line-height: 22px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 @media (max-width: 1199px) {
-    .linkLogoHeader {
-        padding: 10px 0;
-    }
+  .linkLogoHeader {
+    padding: 10px 0;
+  }
 
-    .imgLogoHeader {
-        height: 50px;
-    }
+  .imgLogoHeader {
+    height: 50px;
+  }
 }
 
 @media (max-width: 991px) {
-    .wrapLogoHeader{
-        @include transition(0.5s);
-    }
+  .wrapLogoHeader {
+    @include transition(0.5s);
+  }
 }
 // end logo
 
 // menu
-.listMenuHeader{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    @include clearfix();
+.listMenuHeader {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include clearfix();
 }
 
-.linkMenuHeader{
-    font-size: 11px;
-    line-height: 22px;
-    color: $color3;
-    display: block;
-    font-weight: 700;
-    text-transform: uppercase;
-    @include transition(0.5s);
-    .linkMenuHeaderImg{
-        height: 20px;
-        margin-right: 5px;
-        transform: translateY(-2px);
-    }
+.linkMenuHeader {
+  font-size: 11px;
+  line-height: 22px;
+  color: $color3;
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include transition(0.5s);
+  .linkMenuHeaderImg {
+    height: 20px;
+    margin-right: 5px;
+    transform: translateY(-2px);
+  }
 }
 
-.wrapBtnCtrMenuHeader{
-    display: none;
+.wrapBtnCtrMenuHeader {
+  display: none;
 }
 
 .btnDropdownMenuSub {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    @include translate(0, -50%);
-    color: $color3;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  @include translate(0, -50%);
+  color: $color3;
 
-    svg {
-        width: 10px;
-        height: 20px;
-        @include transition(0.5s);
-        @include translate(0, -2px);
-    }
+  svg {
+    width: 10px;
+    height: 20px;
+    @include transition(0.5s);
+    @include translate(0, -2px);
+  }
 }
 
 .wrapMenuMainHeader {
-    > .wrapMenuMainHeader {
-        > .listMenuMainHeader {
-            visibility: visible;
-            @include opacity(1);
-            @include transition(0.5s);
-            z-index: 990;
-        }
+  > .wrapMenuMainHeader {
+    > .listMenuMainHeader {
+      visibility: visible;
+      @include opacity(1);
+      @include transition(0.5s);
+      z-index: 990;
     }
+  }
 }
 
 .menuSub {
-    .listMenuHeader {
-        padding: 15px 20px;
+  .listMenuHeader {
+    padding: 15px 20px;
 
-        .linkMenuHeader {
-            padding: 10px 0;
-            color: $color5;
-            font-weight: 300;
-        }
-
-        .itemMenuHeader {
-            border-top: 1px dashed $color7;
-        
-            &:first-child {
-                border-top: none;
-            }
-        }
-
-        .menuSub {
-            .btnDropdownMenuSub {
-                color: $color5;
-            }
-        }
-    }
-}
-
-.wrapCloseMenuHeaderMobile {
-    display: none;
-}
-
-@media (min-width: 1200px) {
-    .headerBottom {
-        background-color: $color4;
+    .linkMenuHeader {
+      padding: 10px 0;
+      color: $color5;
+      font-weight: 300;
     }
 
     .itemMenuHeader {
-        &:hover {
-            color: $color3;
-            
-            > .btnDropdownMenuSub,
-            > .linkMenuHeader{
-                color: $color3;
-            }
-        }
-    }
+      border-top: 1px dashed $color7;
 
-    .linkMenuHeader{
-        padding: 10px 0;
-    }
-
-    .wrapMenuMainHeader {
-        position: relative;
-
-        > .wrapMenuHeader {
-            @include clearfix();
-
-            .logoScrollDS {
-                float: left;
-                display: none;
-
-                .linkItem {
-                    display: block;
-                    padding: 10px 0;
-                }
-
-                img {
-                    height: 50px;
-                    width: auto;
-                    display: block;
-                }
-            }
-
-            > .listMenuHeader {
-                display: table;
-                margin: auto;
-
-                > .itemMenuHeader{
-                    margin-left: $MrLeftItemMenu;
-                    float: left;
-
-                    > .linkMenuHeader {
-                        position: relative;
-
-                        &::after {
-                            content:  '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 0;
-                            height: 3px;
-                            background-color: $color3;
-                            @include transition(0.5s);
-                        }
-                    }
-            
-                    &:first-child {
-                        margin-left: 0;
-                    }
-
-                    &:hover {
-                        > .linkMenuHeader {    
-                            &::after {
-                                width: 100%;
-                            }
-                        }
-                    }
-
-                    .itemMenuHeader {
-                        &:hover {
-                            color: $color3;
-                            
-                            > .btnDropdownMenuSub,
-                            > .linkMenuHeader{
-                                color: $color3;
-                            }
-                        }
-                    }
-                
-                }
-            }
-        }
+      &:first-child {
+        border-top: none;
+      }
     }
 
     .menuSub {
-        position: relative;
-        padding-right: 15px;
-
-        .menuSub {
-            padding-right: 22px;
-
-            .btnDropdownMenuSub {
-                @include transform(translate(0, -50%) rotate(-90deg));
-                right: 0;
-            }
-        }
-
-        .wrapMenuHeader {
-            $transitionMenuSub: opacity .3s ease-out, visibility .1s .1s linear;
-            position: absolute;
-            top: 100%;
-            left: -20px;
-            z-index: 991;
-            visibility: hidden;
-            @include opacity(0);
-            @include transition($transitionMenuSub);
-            padding-top: 10px;
-
-            .wrapMenuHeader {
-                top: -15px;
-                left: 100%;
-                padding: 0 0 0 30px;
-            }
-
-            .linkMenuHeader {    
-                text-transform: capitalize;
-
-                &:hover {
-                    @include translate(5px, 0);
-                }
-            }
-        }
-
-        .listMenuHeader {
-            background-color: $color1;
-            @include borderRadius(10px);
-            @include boxShadow($boxShadow3);
-            white-space: nowrap;
-        }
-
-        &:hover {
-            > .wrapMenuHeader {
-                visibility: visible;
-                @include opacity(1);
-            }
-        }
+      .btnDropdownMenuSub {
+        color: $color5;
+      }
     }
+  }
 }
 
-@media (max-width: 1199px) {
-    .headerBottom {
-        background-color: $color1;
-        @include transition(0.5s);
+.wrapCloseMenuHeaderMobile {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .headerBottom {
+    background-color: $color4;
+  }
+
+  .itemMenuHeader {
+    &:hover {
+      color: $color3;
+
+      > .btnDropdownMenuSub,
+      > .linkMenuHeader {
+        color: $color3;
+      }
+    }
+  }
+
+  .linkMenuHeader {
+    padding: 10px 0;
+  }
+
+  .wrapMenuMainHeader {
+    position: relative;
+
+    > .wrapMenuHeader {
+      @include clearfix();
+
+      .logoScrollDS {
+        float: left;
+        display: none;
+
+        .linkItem {
+          display: block;
+          padding: 10px 0;
+        }
+
+        img {
+          height: 50px;
+          width: auto;
+          display: block;
+        }
+      }
+
+      > .listMenuHeader {
+        display: table;
+        margin: auto;
+
+        > .itemMenuHeader {
+          margin-left: $MrLeftItemMenu;
+          float: left;
+
+          > .linkMenuHeader {
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 3px;
+              background-color: $color3;
+              @include transition(0.5s);
+            }
+          }
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:hover {
+            > .linkMenuHeader {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+
+          .itemMenuHeader {
+            &:hover {
+              color: $color3;
+
+              > .btnDropdownMenuSub,
+              > .linkMenuHeader {
+                color: $color3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menuSub {
+    position: relative;
+    padding-right: 15px;
+
+    .menuSub {
+      padding-right: 22px;
+
+      .btnDropdownMenuSub {
+        @include transform(translate(0, -50%) rotate(-90deg));
+        right: 0;
+      }
     }
 
-    .logoScrollDS {
-        display: none;
+    .wrapMenuHeader {
+      $transitionMenuSub: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      z-index: 991;
+      visibility: hidden;
+      @include opacity(0);
+      @include transition($transitionMenuSub);
+      padding-top: 10px;
+
+      .wrapMenuHeader {
+        top: -15px;
+        left: 100%;
+        padding: 0 0 0 30px;
+      }
+
+      .linkMenuHeader {
+        text-transform: capitalize;
+
+        &:hover {
+          @include translate(5px, 0);
+        }
+      }
     }
 
     .listMenuHeader {
-        .linkMenuHeader{
-            padding: 15px;
-        }
-
-        .itemMenuHeader {
-            border-top: 1px solid $color7;
-
-            &:first-child {
-                border-top: none;
-            }
-
-            &.menuSub {
-                position: relative;
-
-                .menuSub {
-                    .btnDropdownMenuSub {
-                        height: 42px;
-                        padding: 11px 0;
-                    }
-                }
-
-                > .linkMenuHeader{
-                    padding-right: 0;
-                    @include widthCalc('100% - 52px');
-                }
-
-                > .wrapMenuHeader {
-                    display: none;
-                    background-color: $color1;
-                }
-            }
-        }
+      background-color: $color1;
+      @include borderRadius(10px);
+      @include boxShadow($boxShadow3);
+      white-space: nowrap;
     }
 
-    .btnDropdownMenuSub {
+    &:hover {
+      > .wrapMenuHeader {
+        visibility: visible;
+        @include opacity(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .headerBottom {
+    background-color: $color1;
+    @include transition(0.5s);
+  }
+
+  .logoScrollDS {
+    display: none;
+  }
+
+  .listMenuHeader {
+    .linkMenuHeader {
+      padding: 15px;
+    }
+
+    .itemMenuHeader {
+      border-top: 1px solid $color7;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &.menuSub {
+        position: relative;
+
+        .menuSub {
+          .btnDropdownMenuSub {
+            height: 42px;
+            padding: 11px 0;
+          }
+        }
+
+        > .linkMenuHeader {
+          padding-right: 0;
+          @include widthCalc("100% - 52px");
+        }
+
+        > .wrapMenuHeader {
+          display: none;
+          background-color: $color1;
+        }
+      }
+    }
+  }
+
+  .btnDropdownMenuSub {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    display: block;
+    z-index: 993;
+    padding: 13px 0;
+    @include transition(0.5s);
+    @include translate(0, 0);
+
+    svg {
+      width: 52px;
+      height: 20px;
+    }
+
+    &:hover {
+      color: $color3;
+    }
+  }
+
+  .wrapCloseMenuHeaderMobile {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    @include heightCalc("100% - 70px");
+    width: 100%;
+    background-color: $color9;
+    z-index: 993;
+    @include transition(0.5s);
+    display: block;
+  }
+
+  .wrapMenuMainHeader {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    @include heightCalc("100% - 70px");
+    max-width: 300px;
+    width: 90%;
+    background-color: $color4;
+    overflow-y: auto;
+    z-index: 993;
+    @include transition(0.5s);
+  }
+
+  .wrapBtnCtrMenuHeader {
+    display: block;
+    @include transition(0.5s);
+    float: left;
+    margin-left: 30px;
+
+    .btnCtrMenu {
+      color: $color2;
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: relative;
+      display: block;
+
+      svg {
+        width: 25px;
+        height: 25px;
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 52px;
-        height: 52px;
-        display: block;
-        z-index: 993;
-        padding: 13px 0;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
         @include transition(0.5s);
-        @include translate(0, 0);
 
-        svg {
-            width: 52px;
-            height: 20px;
+        &.iconClose {
+          @include opacity(0);
+          color: $color3;
         }
+      }
+    }
+  }
 
-        &:hover {
-            color: $color3;
-        }
+  .activeMenu {
+    > .btnDropdownMenuSub {
+      @include transform(rotateX(180deg));
+    }
+
+    > .btnDropdownMenuSub,
+    > .linkMenuHeader {
+      color: $color3;
+    }
+  }
+
+  .showMenu {
+    .wrapMenuMainHeader {
+      left: 0;
     }
 
     .wrapCloseMenuHeaderMobile {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        @include heightCalc('100% - 70px');
-        width: 100%;
-        background-color: $color9;
-        z-index: 993;
-        @include transition(0.5s);
-        display: block;
+      right: 0;
     }
 
-    .wrapMenuMainHeader{
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        @include heightCalc('100% - 70px');
-        max-width: 300px;
-        width: 90%;
-        background-color: $color4;
-        overflow-y: auto;
-        z-index: 993;
-        @include transition(0.5s);
+    .wrapBtnCtrMenuHeader {
+      .btnCtrMenu {
+        color: $color11;
+
+        svg {
+          &.iconOpen {
+            @include opacity(0);
+          }
+
+          &.iconClose {
+            @include opacity(1);
+          }
+        }
+      }
     }
-
-    .wrapBtnCtrMenuHeader{
-        display: block;
-        @include transition(0.5s);
-        float: left;
-        margin-left: 30px;
-
-        .btnCtrMenu {
-            color: $color2;
-            display: block;
-            width: 25px;
-            height: 25px;
-            position: relative;
-            display: block;
-
-            svg {
-                width: 25px;
-                height: 25px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                @include translate(-50%, -50%);
-                @include transition(0.5s);
-
-                &.iconClose {
-                    @include opacity(0);
-                }
-            }
-        }
-    }
-
-    .activeMenu {
-        > .btnDropdownMenuSub {
-            @include transform(rotateX(180deg));
-        }
-
-        > .btnDropdownMenuSub,
-        > .linkMenuHeader {
-            color: $color3;
-        }
-    }
-
-    .showMenu{
-        .wrapMenuMainHeader{
-            left: 0;
-        }
-
-        .wrapCloseMenuHeaderMobile{
-            right: 0;
-        }
-
-        .wrapBtnCtrMenuHeader {
-            .btnCtrMenu {
-                color: $color11;
-
-                svg{
-                    &.iconOpen {
-                        @include opacity(0);
-                    }
-
-                    &.iconClose {
-                        @include opacity(1);
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 // end menu
 
 // language
 .wrapLanguage {
-    float: left;
-    @include transition(0.5s);
+  float: left;
+  @include transition(0.5s);
 
-    .titleLanguage{
-        cursor: pointer;
-        position: relative;
-        padding-right: 15px;
+  .titleLanguage {
+    cursor: pointer;
+    position: relative;
+    padding-right: 15px;
 
-        img {
-            display: block;
-        }
+    img {
+      display: block;
     }
+  }
 
-    .btnDropdownLanguage {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        @include translate(0, -50%);
-        color: $color5;
+  .btnDropdownLanguage {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    @include translate(0, -50%);
+    color: $color5;
 
-        svg {
-            width: 10px;
-            height: 20px;
-            display: block;
-        }
+    svg {
+      width: 10px;
+      height: 20px;
+      display: block;
     }
+  }
 
-    .contentLanguage{
-        position: relative;
+  .contentLanguage {
+    position: relative;
+  }
+
+  .dropdownLanguage {
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    z-index: 993;
+    display: none;
+    margin-top: 15px;
+  }
+
+  .contentDropdown {
+    @include boxShadow($boxShadow3);
+    padding: 7px 0;
+    background-color: $color1;
+    @include borderRadius(5px);
+
+    a {
+      padding: 7px 15px;
+      display: block;
+      @include transition(0.5s);
+      text-align: center;
+
+      img {
+        display: block;
+      }
+
+      &:hover {
+        @include opacity(0.5);
+      }
     }
-    
-    .dropdownLanguage {
-        position: absolute;
-        top: 100%;
-        left: -15px;
-        z-index: 993;
-        display: none;
-        margin-top: 15px
-    }
-
-    .contentDropdown {
-        @include boxShadow($boxShadow3);
-        padding: 7px 0;
-        background-color: $color1;
-        @include borderRadius(5px);
-        
-        a {
-            padding: 7px 15px;
-            display: block;
-            @include transition(0.5s);
-            text-align: center;
-
-            img {
-                display: block;
-            }
-
-            &:hover {
-                @include opacity(0.5);
-            }
-        }
-    }
+  }
 }
 
 @media (max-width: 1199px) {
-    .wrapLanguage {
-        margin-top: 4px;
+  .wrapLanguage {
+    margin-top: 4px;
 
-        .btnDropdownLanguage {
-            color: $color2;
-        }
+    .btnDropdownLanguage {
+      color: $color2;
     }
+  }
 }
 
 @media (max-width: 575px) {
-    .wrapLanguage {
-        margin-left: 0;
-    }
+  .wrapLanguage {
+    margin-left: 0;
+  }
 }
 // end language
 
 // contact
 .wrapInfoContact {
-    @include clearfix();
+  @include clearfix();
 
-    .linkItem {
-        display: block;
-        float: left;
-        color: $color3;
-        margin-left: $MrLeftItemContact;
-        @include transition(0.5s);
+  .linkItem {
+    display: block;
+    float: left;
+    color: $color3;
+    margin-left: $MrLeftItemContact;
+    @include transition(0.5s);
 
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:hover {
-            color: $color20;
-        }
-
-        svg {
-            width: 15px;
-            height: 15px;
-            margin-right: 5px;
-        }
+    &:first-child {
+      margin-left: 0;
     }
+
+    &:hover {
+      color: $color20;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
-    .wrapInfoContact {
-        position: absolute;
-        top: -54px;
-        right: 80px;
-    }
+  .wrapInfoContact {
+    position: absolute;
+    top: -54px;
+    right: 80px;
+  }
 }
 
 @media (max-width: 1199px) {
-    .wrapInfoContact {
-        .linkItem {
-            display: block;
-            position: relative;
-            margin: 0;
-            padding: 15px;
-            padding-left: 40px;
-            width: 100%;
-            border-top: 1px solid $color7;
+  .wrapInfoContact {
+    .linkItem {
+      display: block;
+      position: relative;
+      margin: 0;
+      padding: 15px;
+      padding-left: 40px;
+      width: 100%;
+      border-top: 1px solid $color7;
 
-            svg {
-                position: absolute;
-                top: 18px;
-                left: 15px;
-            }
-        }
+      svg {
+        position: absolute;
+        top: 18px;
+        left: 15px;
+      }
     }
+  }
 }
 // end contact
 
 // fixed menu
 .fixedMenu {
-    .headerBottom {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 991;
-    }
+  .headerBottom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 991;
+  }
 
-    .headerBottom {
-        background-color: $color1;
-        @include boxShadow($boxShadow3);
-    }
+  .headerBottom {
+    background-color: $color1;
+    @include boxShadow($boxShadow3);
+  }
 }
 
 @media (min-width: 1200px) {
-    .fixedMenu {
-        .wrapMenuMainHeader {
-            > .wrapMenuHeader {
-                .logoScrollDS {
-                    display: block;
-                }
-
-                > .listMenuHeader {
-                    margin-right: 0;
-                    float: right;
-                    margin-top: 15px;
-        
-                    > .itemMenuHeader {
-                        margin-left: 15px;
-                    }
-                }
-            }
+  .fixedMenu {
+    .wrapMenuMainHeader {
+      > .wrapMenuHeader {
+        .logoScrollDS {
+          display: block;
         }
 
-        .linkMenuHeader {
-            font-size: 10px;
-            .linkMenuHeaderImg{
-                height: 15px;
-            }
+        > .listMenuHeader {
+          margin-right: 0;
+          float: right;
+          margin-top: 15px;
+
+          > .itemMenuHeader {
+            margin-left: 15px;
+          }
         }
+      }
     }
+
+    .linkMenuHeader {
+      font-size: 10px;
+      .linkMenuHeaderImg {
+        height: 15px;
+      }
+    }
+  }
 }
 
-@media (max-width: 1199px) { 
-    .fixedMenu {
-        .contentHeader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 991;
-            @include boxShadow($boxShadow3);
-        }
+@media (max-width: 1199px) {
+  .fixedMenu {
+    .contentHeader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 991;
+      @include boxShadow($boxShadow3);
     }
+  }
 }
 // end fixed menu
