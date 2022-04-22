@@ -12005,6 +12005,7 @@ strong {
 @media (max-width: 575px) {
   .wrapCopyright .menuItem .linkItem {
     margin-left: 10px;
+    font-size: 12px;
   }
   .wrapCopyright .menuItem .linkItem::before {
     left: -5px;
