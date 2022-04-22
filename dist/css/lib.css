@@ -11725,7 +11725,7 @@ strong {
   margin-left: 0;
 }
 .footer .footerFanpage {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .footer .footerReview {
   width: 240px;
@@ -11877,7 +11877,7 @@ strong {
     text-align: center;
   }
   .footer .textAbout .footerContent .footerContentItem:last-child {
-    margin-top: 30px;
+    margin-top: 15px;
     flex-direction: column;
     align-items: center;
   }
