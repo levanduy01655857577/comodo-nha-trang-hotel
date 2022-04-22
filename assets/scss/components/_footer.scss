@@ -25,10 +25,10 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: -8px;
+      top: 2px;
       z-index: 2;
       .footerLogoImg {
-        width: 170px;
+        width: 200px;
       }
     }
     .wrapCircle {
@@ -251,7 +251,87 @@
 }
 
 // Responsive
-@media (max-width: 991px) {
+// @media (max-width: 991px) {
+// }
+/* PC: width >= 1024px */
+@media only screen and (max-width: 1919px) {
+  .wrapText {
+    .footerLogo {
+      top: -8px !important;
+      .footerLogoImg {
+        width: 200px !important;
+      }
+    }
+  }
+}
+
+/* PC Low */
+@media screen and (max-width: 1237px) {
+  .wrapText {
+    .footerLogo {
+      top: -8px !important;
+      .footerLogoImg {
+        width: 160px !important;
+      }
+    }
+  }
+}
+
+// Ipad pro
+@media (max-width: 1024px) {
+  .wrapText {
+    .footerLogo {
+      .footerLogoImg {
+        width: 120px !important;
+      }
+    }
+  }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .footer {
+    .wrapText {
+      .wrapCircle {
+        .imgFooterCircleReverse {
+          height: 90px;
+        }
+      }
+      .footerLogo {
+        top: 2px !important;
+        .footerLogoImg {
+          width: 180px;
+        }
+      }
+    }
+    .textAbout {
+      margin-top: 30px;
+      padding-bottom: 30px;
+      .titleFooter {
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+      }
+    }
+    .footerContent {
+      flex-direction: column;
+      align-items: center;
+      .footerContentItem {
+        .textItem {
+          text-align: center;
+        }
+        &:last-child {
+          margin-top: 15px;
+        }
+      }
+    }
+    .social {
+      margin-inline: auto;
+    }
+    .footerFanpage {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /* Mobie: width < 740px */
@@ -259,8 +339,9 @@
   .footer {
     .wrapText {
       .footerLogo {
+        top: -8px !important;
         .footerLogoImg {
-          width: 110px;
+          width: 110px !important;
         }
       }
       .wrapCircle {
@@ -304,48 +385,4 @@
       }
     }
   }
-}
-
-/* Tablet: width >= 740px and width < 1024px */
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
-  .footer {
-    .wrapText {
-      .wrapCircle {
-        .imgFooterCircleReverse {
-          height: 90px;
-        }
-      }
-    }
-    .textAbout {
-      margin-top: 30px;
-      padding-bottom: 30px;
-      .titleFooter {
-        font-size: 24px;
-        line-height: 32px;
-        text-align: center;
-      }
-    }
-    .footerContent {
-      flex-direction: column;
-      align-items: center;
-      .footerContentItem {
-        .textItem {
-          text-align: center;
-        }
-        &:last-child {
-          margin-top: 15px;
-        }
-      }
-    }
-    .social {
-      margin-inline: auto;
-    }
-    .footerFanpage {
-      margin-bottom: 0;
-    }
-  }
-}
-
-/* PC Low */
-@media (min-width: 1024px) and (max-width: 1239px) {
 }
